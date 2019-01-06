@@ -1,9 +1,9 @@
-export default (state = {test: 1}, action) => {
+export default (state = {number: 0, a: 1, b: 1}, action) => {
     switch (action.type) {
-        case 'INCREMENT':
-            return {
-                result: action.payload
-            };
+        case 'ADD':
+            return Object.assign({number: state.number += action.payload}, state);
+        case 'SUBTRACT':
+            return Object.assign({number: state.number -= action.payload}, state);
         default:
             return state;
     }
