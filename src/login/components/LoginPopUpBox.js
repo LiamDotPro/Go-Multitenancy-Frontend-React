@@ -16,8 +16,15 @@ const LoginPopUpBox = () => {
                     </div>
                 </div>
                 <div className="login-box-area">
-                    <LoginFieldContainer/>
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <LoginFieldContainer/>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div className="mobile-login-container d-none d-sm-block">
+
             </div>
         </div>
     );

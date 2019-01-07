@@ -4,6 +4,7 @@ import HostSelector from "../components/HostSelector";
 import LoginFields from "../components/LoginFields";
 import CreateAccount from "../components/CreateAccount";
 import TermsAndConditionsArea from "../components/TermsAndConditionsArea";
+import BackSection from '../components/BackSection'
 
 class LoginFieldContainer extends React.Component {
 
@@ -11,9 +12,10 @@ class LoginFieldContainer extends React.Component {
         return (
             <div className="LoginFieldContainer">
                 <HostSelector/>
+                <BackSection/>
                 <div className="inner-popup-box">
-                    <Route path="/login" component={LoginFields}/>
-                    <Route path="/login/create" component={CreateAccount}/>
+                    <Route path="/login" exact component={LoginFields}/>
+                    <Route path="/login/create" exact component={CreateAccount}/>
                 </div>
                 <TermsAndConditionsArea/>
             </div>

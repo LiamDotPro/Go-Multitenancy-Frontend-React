@@ -8,7 +8,13 @@ class LoginContainer extends React.Component {
     render() {
         return (
             <div className="LoginContainer">
-                <LoginArea/>
+                <div className="container-fluid nopad">
+                    <div className="row no-gutters">
+                        <div className="col-12">
+                            <LoginArea/>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -1,6 +1,9 @@
+.nopad {
+  padding: 0;
+}
+
 .LoginArea {
   background: url('../assets/login-area-background.png'); // http://api.thumbr.it/whitenoise-361x370.png?background=459dfbf5&noise=626262&density=80&opacity=12
-  min-height: 100vh;
 }
 
 .LoginPopUpBox {
@@ -15,20 +18,21 @@
     border-radius: 6px 6px;
     box-shadow: 5px 7px 17px 0 rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     background: url('../assets/box-container-background.png');
-    display: flex;
+    display: none;
 
     .art-section {
       display: flex;
-      width: 50%;
       align-items: center;
       justify-content: center;
+      margin-left: -60px;
+      width: 50%;
 
       img {
-        height: 500px;
         z-index: 9999;
-        position: absolute;
-        left: 300px;
-        top: 220px;
+        display: block;
+        position: relative;
+        height: 570px;
+        -webkit-animation: float 30s ease-in-out infinite;
         animation: float 30s ease-in-out infinite;
       }
 
@@ -40,12 +44,12 @@
 
       .angle {
         height: 700px;
-        width: 144px;
+        width: 140px;
         background: #2c3539;
         -webkit-transform: skewX(-10deg);
         transform: skewX(-6deg);
-        position: relative;
         left: 100px;
+        margin-right: -38px;
       }
     }
   }
@@ -86,22 +90,52 @@
   margin-top: 20px;
   padding-left: 80px;
   padding-right: 80px;
+
   h2 {
     font-weight: 300;
+    font-size: 12px;
     a {
+      text-decoration: underline;
       color: white;
     }
   }
 }
 
 .inner-popup-box {
-  background: white;
-  height: 450px;
-  border-radius: 4px 4px;
-  margin-top: 30px;
+  background: #e4e4e4;
+  border-radius: 4px;
+  margin-top: 5px;
   margin-right: 40px;
   margin-left: 40px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.BackSection {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    opacity: 0.6;
+    transition: 300ms opacity ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+}
+
+@media (min-width: 768px) {
+  .box-container {
+    display: flex !important;
+  }
 }
 
 @keyframes float {

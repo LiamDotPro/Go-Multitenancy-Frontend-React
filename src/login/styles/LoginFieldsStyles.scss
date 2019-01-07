@@ -1,0 +1,19 @@
+.LoginFields {
+  height: 100%;
+}
+
+label{
+  color: #2c3539;
+}
+
+.forgot-password {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  opacity: 0.7;
+  color: #2c3539;
+  transition: 300ms ease-in-out opacity;
+
+  &:hover {
+    opacity: 1;
+  }
+}
