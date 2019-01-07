@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import {BrowserRouter} from 'react-router-dom';
-import './App.css';
-import LoginContainer from "./containers/LoginContainer";
+import {BrowserRouter, Route} from 'react-router-dom';
+import './App.scss';
+import LoginContainer from "./login/containers/LoginContainer";
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <LoginContainer/>
+                <Route path="/login" component={LoginContainer}/>
             </BrowserRouter>
         );
     }

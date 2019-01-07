@@ -1,21 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {add, subtract} from '../store/actions/IncrementNumber'
+import {add, subtract} from '../../store/actions/IncrementNumber'
+import LoginArea from "../components/LoginArea";
 
 class LoginContainer extends React.Component {
 
     render() {
         return (
             <div className="LoginContainer">
-                <h1>Login Container Loaded</h1>
-                <h3>number: {this.props.number}</h3>
-                <button onClick={this.props.add}>add</button>
-                <button onClick={this.props.subtract}>sub</button>
+                <LoginArea/>
             </div>
         );
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log(this.props);
     }
 
