@@ -3,7 +3,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import LoginContainer from "./login/containers/LoginContainer";
-import PublicContainer from "./public/containers/PublicContainer";
+import HomePageContainer from "./public/containers/HomePageContainer";
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Route path="/login" component={LoginContainer}/>
-                    <Route path="/" component={PublicContainer}/>
+                    <Route path="/" component={HomePageContainer}/>
                 </div>
             </BrowserRouter>
         );
