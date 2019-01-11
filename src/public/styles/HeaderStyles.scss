@@ -1,10 +1,13 @@
-.header-content {
-  
-}
-
-
 .version-number {
   height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .github-btn {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
 }
 
 .tags {
@@ -34,7 +37,7 @@
 }
 
 .tag:not(body).go-blue {
-  background-color: #6eb6e6;
+  background-color: #48a6e6;
   color: #fff;
 }
 
@@ -60,4 +63,35 @@
 span {
   font-style: inherit;
   font-weight: inherit;
+}
+
+.Header {
+  background: #6eb6e6;
+
+  .navbar-brand {
+    color: white;
+  }
+
+  ul {
+    li {
+      .active {
+        opacity: 1 !important;
+        color: rgb(255, 255, 255) !important;
+      }
+
+      a {
+
+        transition: opacity 100ms ease-in-out;
+
+        opacity: 0.2;
+        color: rgb(255, 255, 255);
+
+        &:hover {
+          opacity: 1;
+          color: rgb(255, 255, 255);
+        }
+
+      }
+    }
+  }
 }
